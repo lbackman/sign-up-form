@@ -46,3 +46,26 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Webpage specific css below */
+
+:root {
+  font-size: 16px;
+}
+
+/* body {
+  background-image: url('../images/evgeny-ozerov-mountain-night-sky.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+} */
+
+.site-container {
+  display: flex;
+}
+
+article {
+  background-color: aliceblue;
+  min-height: 100vh;
+  flex-grow: 1;
+}
