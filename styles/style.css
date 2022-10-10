@@ -49,8 +49,17 @@ table {
 
 /* Webpage specific css below */
 
+* {
+	box-sizing: border-box;
+}
+
 :root {
   font-size: 16px;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
 }
 
 /* body {
@@ -60,12 +69,32 @@ table {
   background-size: cover;
 } */
 
-.site-container {
+.site-container,
+.input-box,
+.form-section, 
+header,
+article {
   display: flex;
+}
+
+.input-box,
+header,
+article {
+	flex-direction: column;
+}
+
+header {
+	justify-content: end;
 }
 
 article {
   background-color: aliceblue;
   min-height: 100vh;
   flex-grow: 1;
+	justify-content: center;
+}
+
+.stand-out {
+	background-color: antiquewhite;
+	box-shadow: 0px 2px 4px rgb(161, 159, 157);
 }
