@@ -71,10 +71,27 @@ h2 {
 
 .site-container,
 .input-box,
-.form-section, 
+.form-section,
+.logo,
+span,
 header,
 article {
   display: flex;
+}
+
+h2 {
+	width: clamp(200px, 60%, 500px);
+}
+
+.logo img {
+	width: 60px;
+	height: 60px;
+}
+
+span {
+	align-items: center;
+	font-size: 4rem;
+	font-weight: 700;
 }
 
 .input-box,
@@ -83,8 +100,21 @@ article {
 	flex-direction: column;
 }
 
+.form-section {
+	flex-wrap: wrap;
+}
+
 header {
-	justify-content: end;
+	justify-content: space-between;
+	width: max-content;
+}
+
+.logo {
+	margin-top: 36vh;
+}
+
+.photo-credit {
+	margin-bottom: 12px;
 }
 
 article {
@@ -97,4 +127,11 @@ article {
 .stand-out {
 	background-color: antiquewhite;
 	box-shadow: 0px 2px 4px rgb(161, 159, 157);
+}
+
+h2,
+.form-section,
+.submit-button,
+.sign-in {
+	padding-left: 24px;
 }
