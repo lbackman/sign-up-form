@@ -55,32 +55,41 @@ table {
 
 :root {
   font-size: 16px;
+	--stand-out-color: white;
+	--logo-color: rgba(123,123,123, 0.6);
+	--shadow-color: #dcdddd;
+	--bg-color: #f9fafb;
+	--error-color: #c44646;
+	--button-color: #2a2c31;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 h2 {
 	font-size: 1.5rem;
-	font-weight: bold;
+	font-weight: 600;
+	line-height: 110%;
+	width: clamp(200px, 60%, 600px);
 }
 
-/* body {
+body {
   background-image: url('../images/evgeny-ozerov-mountain-night-sky.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-} */
+}
 
 .site-container,
 .input-box,
 .form-section,
 .logo,
+.credit-container,
 span,
 header,
 article {
   display: flex;
-}
-
-h2 {
-	width: clamp(200px, 60%, 500px);
 }
 
 .logo img {
@@ -102,36 +111,57 @@ article {
 
 .form-section {
 	flex-wrap: wrap;
+	width: min(80%, 450px);
+	justify-content: space-between;
 }
 
 header {
 	justify-content: space-between;
-	width: max-content;
+	width: 70%;
 }
 
 .logo {
 	margin-top: 36vh;
+	color: #f9fafb;
+	background-color: var(--logo-color);
+	padding: 1rem;
+	justify-content: center;
+}
+
+.credit-container {
+	justify-content: center;
+	align-items: center;
 }
 
 .photo-credit {
 	margin-bottom: 12px;
+	font-size: 0.75rem;
+	color: white;
+}
+
+a {
+	color: white;
 }
 
 article {
-  background-color: aliceblue;
+  background-color: var(--bg-color);
   min-height: 100vh;
   flex-grow: 1;
 	justify-content: center;
 }
 
 .stand-out {
-	background-color: antiquewhite;
-	box-shadow: 0px 2px 4px rgb(161, 159, 157);
+	background-color: var(--stand-out-color);
+	box-shadow: 4px 2px 4px var(--shadow-color);
 }
 
 h2,
 .form-section,
 .submit-button,
 .sign-in {
-	padding-left: 24px;
+	padding-left: 36px;
+}
+
+.login {
+	color: var(--button-color);
 }
