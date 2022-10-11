@@ -115,6 +115,14 @@ article {
 	justify-content: space-between;
 }
 
+.input-box {
+	margin-bottom: 20px;
+}
+
+.input-box {
+	padding-right: 12px;
+}
+
 header {
 	justify-content: space-between;
 	width: 70%;
@@ -153,6 +161,13 @@ article {
 .stand-out {
 	background-color: var(--stand-out-color);
 	box-shadow: 4px 2px 4px var(--shadow-color);
+	margin: 20px 0 20px 0;
+	padding: 20px 0 20px 0;
+}
+
+.stand-out h2,
+.submit-button {
+	margin-bottom: 20px;
 }
 
 h2,
@@ -160,6 +175,14 @@ h2,
 .submit-button,
 .sign-in {
 	padding-left: 36px;
+}
+
+article>h2:first-child {
+	padding-top: 36px;
+}
+
+.sign-in {
+	padding-bottom: 36px;
 }
 
 .login {
