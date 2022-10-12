@@ -73,6 +73,7 @@ table {
 	--button-color: #2a2c31;
 	--hover-color: #544368;
 	--active-color: #9b78c3;
+	--valid-color: #06a106;
 }
 
 body {
@@ -196,8 +197,8 @@ article {
 }
 
 .input-box input:not(:placeholder-shown) {
-  border: 1px solid #D55C5F;
-  color: #D55C5F;
+  border: 1px solid var(--error-color);
+  color: var(--error-color);
   box-shadow: none;
 }
 
@@ -207,6 +208,28 @@ article {
 	border-radius: 6px;
 	border: 1px solid black; 
 	padding: 10px;
+}
+
+span.errormessage {
+	position: relative;
+}
+
+input + span.errormessage::before {
+	content: "";
+	font-size: 0.9rem;
+	position: absolute;
+	left: 90%;
+	bottom: 195%;
+}
+
+input:not(:placeholder-shown) + span.errormessage::before {
+	content: "⚠";
+	color: var(--error-color);
+}
+
+input:valid + span.errormessage::before {
+	content: "✓";
+	color: var(--valid-color);
 }
 
 .input-box input:focus-visible,
@@ -227,10 +250,15 @@ span.errormessage::after {
 }
 
 input[type="email"]:not(:placeholder-shown) + span.errormessage::after {
-	content: " * Example: jane.doe@example.com";
+	content: " * Example: name@example.com";
 }
 
-input[type="email"]:valid + span.errormessage::after {
+input[type="password"]:not(:placeholder-shown) + span.errormessage::after {
+	content: " * Use at least 8 characters";
+}
+
+input[type="email"]:valid + span.errormessage::after,
+input[type="password"]:valid + span.errormessage::after {
 	content: "";
 }
 
@@ -248,6 +276,7 @@ input[type="email"]:valid + span.errormessage::after {
 
 .submit-button button[type="submit"]:hover {
 	background-color: var(--hover-color);
+	cursor: pointer;
 }
 
 .submit-button button[type="submit"]:active {
