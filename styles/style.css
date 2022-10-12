@@ -195,11 +195,17 @@ article {
 	margin-bottom: 2px;
 }
 
+.input-box input:not(:placeholder-shown) {
+  border: 1px solid #D55C5F;
+  color: #D55C5F;
+  box-shadow: none;
+}
+
 .input-box input {
 	font-size: 0.85rem;
 	font-weight: 200;
 	border-radius: 6px;
-	border: 1px solid black;
+	border: 1px solid black; 
 	padding: 10px;
 }
 
@@ -209,6 +215,7 @@ article {
 	outline: none;
 	border: 1px solid var(--border-color);
 	box-shadow: 1px 1px 3px var(--shadow-color);
+	color: black;
 }
 
 .submit-button button[type="submit"] {
