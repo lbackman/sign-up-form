@@ -71,6 +71,8 @@ table {
 	--border-color: #5172d8;
 	--error-color: #c44646;
 	--button-color: #2a2c31;
+	--hover-color: #544368;
+	--active-color: #9b78c3;
 }
 
 body {
@@ -204,6 +206,24 @@ article {
 	box-shadow: 1px 1px 3px var(--shadow-color);
 }
 
+.submit-button button[type="submit"] {
+	appearance: none;
+	border: none;
+	background-color: var(--button-color);
+	color: var(--stand-out-color);
+	border-radius: 5px;
+	height: 36px;
+	width: 180px;
+	box-shadow: 1px 1px 3px var(--shadow-color);
+}
+
+.submit-button button[type="submit"]:hover {
+	background-color: var(--hover-color);
+}
+
+.submit-button button[type="submit"]:active {
+	background-color: var(--active-color);
+}
 
 h2,
 .form-section,
