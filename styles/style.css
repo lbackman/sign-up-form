@@ -57,7 +57,7 @@ table {
   font-style: normal;
 }
 
-* {
+*, *:before, *:after  {
 	box-sizing: border-box;
 }
 
@@ -67,6 +67,8 @@ table {
 	--logo-color: rgba(123,123,123, 0.6);
 	--shadow-color: #dcdddd;
 	--bg-color: #f9fafb;
+	--label-color: #5c6673;
+	--border-color: #5172d8;
 	--error-color: #c44646;
 	--button-color: #2a2c31;
 }
@@ -101,8 +103,9 @@ article {
 }
 
 .logo img {
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
+	margin-right: 5px;
 }
 
 span {
@@ -119,16 +122,14 @@ article {
 
 .form-section {
 	flex-wrap: wrap;
-	width: min(80%, 450px);
+	width: min(80%, 550px);
 	justify-content: space-between;
 }
 
 .input-box {
 	margin-bottom: 20px;
-}
-
-.input-box {
 	padding-right: 12px;
+	width: 240px;
 }
 
 header {
@@ -178,6 +179,31 @@ article {
 .submit-button {
 	margin-bottom: 20px;
 }
+
+.input-box label {
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--label-color);
+	font-size: 0.7rem;
+	margin-bottom: 2px;
+}
+
+.input-box input {
+	font-size: 0.85rem;
+	font-weight: 200;
+	border-radius: 6px;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.input-box input:focus-visible,
+.input-box input:focus,
+.input-box input:active {
+	outline: none;
+	border: 1px solid var(--border-color);
+	box-shadow: 1px 1px 3px var(--shadow-color);
+}
+
 
 h2,
 .form-section,
