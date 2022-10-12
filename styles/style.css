@@ -122,8 +122,12 @@ article {
 	flex-direction: column;
 }
 
+.logo,
 .form-section {
 	flex-wrap: wrap;
+}
+
+.form-section {
 	width: min(80%, 550px);
 	justify-content: space-between;
 }
@@ -155,6 +159,7 @@ header {
 
 .photo-credit {
 	margin-bottom: 12px;
+	margin-left: 20px;
 	font-size: 0.75rem;
 	color: white;
 }
@@ -207,6 +212,7 @@ article {
 }
 
 .submit-button button[type="submit"] {
+	margin-right: 20px;
 	appearance: none;
 	border: none;
 	background-color: var(--button-color);
@@ -238,6 +244,7 @@ article>h2:first-child {
 
 .sign-in {
 	padding-bottom: 36px;
+	padding-right: 20px;
 }
 
 .login {
