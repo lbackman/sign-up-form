@@ -211,11 +211,27 @@ article {
 
 .input-box input:focus-visible,
 .input-box input:focus,
-.input-box input:active {
+.input-box input:active,
+.input-box input:valid {
 	outline: none;
 	border: 1px solid var(--border-color);
 	box-shadow: 1px 1px 3px var(--shadow-color);
 	color: black;
+}
+
+span.errormessage::after {
+	content: "";
+	font-weight: 300;
+	height: 0.7rem;
+	font-size: 0.7rem;
+}
+
+input[type="email"]:not(:placeholder-shown) + span.errormessage::after {
+	content: " * Example: jane.doe@example.com";
+}
+
+input[type="email"]:valid + span.errormessage::after {
+	content: "";
 }
 
 .submit-button button[type="submit"] {
