@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.5;
 }
 ol, ul {
 	list-style: none;
@@ -70,9 +70,9 @@ table {
 	--label-color: #5c6673;
 	--border-color: #5172d8;
 	--error-color: #c44646;
-	--button-color: #2a2c31;
+	--button-color: #404551;
 	--hover-color: #544368;
-	--active-color: #9b78c3;
+	--active-color: #6a5385;
 	--valid-color: #06a106;
 }
 
@@ -80,11 +80,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+em {
+	font-style: italic;
+}
+
 h2 {
 	font-size: 1.5rem;
 	font-weight: 600;
 	line-height: 110%;
-	width: clamp(200px, 60%, 600px);
+	width: clamp(200px, 70%, 600px);
 }
 
 body {
